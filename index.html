@@ -13,14 +13,16 @@
     <header>
 
         <main class="w-3/4 mx-auto">
-            <!-- Balance and Transaction -->
+
             <section class="mt-8">
+                <!-- image part -->
                 <div class="grid grid-cols-2 gap-4">
                     <div>
                         <img src="images/mac.png" alt="">
                     </div>
                     <div class="p-8">
                         <div>
+                            <!-- header part -->
                             <h1 class="text-5xl text-center">Customize your Blue 24-inch iMac with Apple M1 chip</h1>
                             <p class="mt-4 font-semibold">Apple M1 chip with 8-core CPU with 4-performance cores and
                                 4-efficiency cores,
@@ -30,98 +32,129 @@
                                 Magic Mouse Magic Keyboard-US English</p>
                         </div>
                         <div>
+                            <!-- memory part -->
                             <h2 class="text-xl mt-6 font-semibold">Memory</h2>
                             <div class="grid grid-cols-2 gap-4 mt-2">
                                 <div>
-                                    <button class="bg-gray-200 px-4 rounded py-2 text-black font-small">8GB Unified
+                                    <button id="8gb-memory"
+                                        class="bg-gray-200 px-4 rounded py-2 text-black font-small">8GB Unified
                                         Memory</button>
                                 </div>
                                 <div>
-                                    <button class="bg-gray-200 px-4 rounded py-2 text-black font-small">16GB
+                                    <button id="16gb-memory"
+                                        class="bg-gray-200 px-4 rounded py-2 text-black font-small">16GB
                                         Unified Memory</button>
                                 </div>
                             </div>
                         </div>
                         <div>
+                            <!-- storage part -->
                             <h2 class="text-xl mt-6 font-semibold">Storage</h2>
                             <div class="grid grid-cols-3 gap-4 mt-2">
                                 <div>
-                                    <button class="bg-gray-200 px-4 rounded py-2 text-black font-small">256GB SSD
+                                    <button id="256gb-storage"
+                                        class="bg-gray-200 px-4 rounded py-2 text-black font-small">256GB SSD
                                         Storage</button>
                                 </div>
                                 <div>
-                                    <button class="bg-gray-200 px-4 rounded py-2 text-black font-small">512GB SSD
+                                    <button id="512gb-storage"
+                                        class="bg-gray-200 px-4 rounded py-2 text-black font-small">512GB SSD
                                         Storage</button>
                                 </div>
                                 <div>
-                                    <button class="bg-gray-200 px-4 rounded py-2 text-black font-small">1TB SSD
+                                    <button id="1tb-storage"
+                                        class="bg-gray-200 px-4 rounded py-2 text-black font-small">1TB SSD
                                         Storage</button>
                                 </div>
                             </div>
                         </div>
                         <div>
+                            <!-- delivery part -->
                             <h2 class="text-xl mt-6 font-semibold">Choose your delivery option</h2>
                             <div class="grid grid-cols-2 gap-4 mt-2">
                                 <div>
-                                    <button class="bg-gray-200 px-4 rounded py-2 text-black font-small">Friday Aug 25,
+                                    <button id="delivery-option1"
+                                        class="bg-gray-200 px-4 rounded py-2 text-black font-small">Friday Aug 25,
                                         Free Prime Delivery</button>
                                 </div>
                                 <div>
-                                    <button class="bg-gray-200 px-4 rounded py-2 text-black font-small">Friday Aug 251,
+                                    <button id="delivery-option2"
+                                        class="bg-gray-200 px-4 rounded py-2 text-black font-small">Friday Aug 21,
                                         Delivery Charge $20</button>
                                 </div>
                             </div>
                         </div>
+                        <!-- total calculation part -->
                         <div class="mt-8 mb-4 grid grid-cols-2 gap-4">
+                            <!-- fixed price part -->
                             <div>
                                 <h2 class="text-xl font-semibold">Best Price</h2>
                             </div>
                             <div>
-                                <h2 class="text-xl font-semibold">$1299</h2>
+                                <h2 class="text-xl font-semibold">$<span id="best-cost">1299</span></h2>
                             </div>
                         </div>
                         <hr>
                         <div class="mt-4 mb-4 grid grid-cols-2 gap-4">
+                            <!-- memory cost part -->
                             <div>
                                 <h2 class="text-xl font-semibold">Extra Memory Cost</h2>
                             </div>
                             <div>
-                                <h2 class="text-xl font-semibold">$0</h2>
+                                <h2 class="text-xl font-semibold">$<span id="memory-cost">0</span></h2>
                             </div>
                         </div>
                         <hr>
                         <div class="mt-4 mb-4 grid grid-cols-2 gap-4">
+                            <!-- storage cost part -->
                             <div>
                                 <h2 class="text-xl font-semibold">Extra Storage Cost</h2>
                             </div>
                             <div>
-                                <h2 class="text-xl font-semibold">$0</h2>
+                                <h2 class="text-xl font-semibold">$<span id="storage-cost">0</span></h2>
                             </div>
                         </div>
                         <hr>
                         <div class="mt-4 mb-4 grid grid-cols-2 gap-4">
+                            <!-- delivery cost part -->
                             <div>
                                 <h2 class="text-xl font-semibold">Delivery Charge</h2>
                             </div>
                             <div>
-                                <h2 class="text-xl font-semibold">$0</h2>
+                                <h2 class="text-xl font-semibold">$<span id="delivery-cost">0</span></h2>
                             </div>
                         </div>
                         <hr>
                         <div class="mt-4 mb-4 grid grid-cols-2 gap-4">
+                            <!-- total price part -->
                             <div>
                                 <h2 class="text-xl font-semibold">Total Price</h2>
                             </div>
                             <div>
-                                <h2 class="text-xl font-semibold">$1299</h2>
+                                <h2 class="text-xl font-semibold">$<span id="total-cost">1299</span></h2>
                             </div>
                         </div>
+                        <!-- promo code part -->
+                        <div class="p-8 mx-auto mt-8">
+                            <h3 class="text-2xl mb-4">Add PromoCode</h3>
+                            <div>
 
+                                <input id="promo-input" class="border-2 border-gray-400 rounded mb-4 px-2"
+                                    type="password">
+                                <button id="discount-btn"
+                                    class="bg-red-600 px-4 rounded py-2 text-white font-medium">Apply</button>
+                            </div>
+
+                        </div>
                     </div>
 
                 </div>
             </section>
         </main>
+        <!-- total amount part -->
+        <footer>
+            <h1 class="text-5xl text-center">Total:$<span id="discount-cost">1299</span></h1>
+        </footer>
     </header>
 
 
