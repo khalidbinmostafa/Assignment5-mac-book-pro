@@ -7,6 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mac Book Pro</title>
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+
+    <style>
+        #font-weight {
+
+            height: 1px;
+            width: auto;
+            background-color: black;
+            border: 2px solid;
+        }
+    </style>
 </head>
 
 <body>
@@ -36,12 +46,12 @@
                             <h2 class="text-xl mt-6 font-semibold">Memory</h2>
                             <div class="grid grid-cols-2 gap-4 mt-2">
                                 <div>
-                                    <button id="8gb-memory"
+                                    <button id="memory-btn1"
                                         class="bg-gray-200 px-4 rounded py-2 text-black font-small">8GB Unified
                                         Memory</button>
                                 </div>
                                 <div>
-                                    <button id="16gb-memory"
+                                    <button id="memory-btn2"
                                         class="bg-gray-200 px-4 rounded py-2 text-black font-small">16GB
                                         Unified Memory</button>
                                 </div>
@@ -52,17 +62,17 @@
                             <h2 class="text-xl mt-6 font-semibold">Storage</h2>
                             <div class="grid grid-cols-3 gap-4 mt-2">
                                 <div>
-                                    <button id="256gb-storage"
+                                    <button id="storage-btn1"
                                         class="bg-gray-200 px-4 rounded py-2 text-black font-small">256GB SSD
                                         Storage</button>
                                 </div>
                                 <div>
-                                    <button id="512gb-storage"
+                                    <button id="storage-btn2"
                                         class="bg-gray-200 px-4 rounded py-2 text-black font-small">512GB SSD
                                         Storage</button>
                                 </div>
                                 <div>
-                                    <button id="1tb-storage"
+                                    <button id="storage-btn3"
                                         class="bg-gray-200 px-4 rounded py-2 text-black font-small">1TB SSD
                                         Storage</button>
                                 </div>
@@ -73,12 +83,12 @@
                             <h2 class="text-xl mt-6 font-semibold">Choose your delivery option</h2>
                             <div class="grid grid-cols-2 gap-4 mt-2">
                                 <div>
-                                    <button id="delivery-option1"
+                                    <button id="delivery-btn1"
                                         class="bg-gray-200 px-4 rounded py-2 text-black font-small">Friday Aug 25,
                                         Free Prime Delivery</button>
                                 </div>
                                 <div>
-                                    <button id="delivery-option2"
+                                    <button id="delivery-btn2"
                                         class="bg-gray-200 px-4 rounded py-2 text-black font-small">Friday Aug 21,
                                         Delivery Charge $20</button>
                                 </div>
@@ -91,7 +101,7 @@
                                 <h2 class="text-xl font-semibold">Best Price</h2>
                             </div>
                             <div>
-                                <h2 class="text-xl font-semibold">$<span id="best-cost">1299</span></h2>
+                                <h2 class="text-xl font-semibold">$<span id="fixed-cost">1299</span></h2>
                             </div>
                         </div>
                         <hr>
@@ -101,7 +111,7 @@
                                 <h2 class="text-xl font-semibold">Extra Memory Cost</h2>
                             </div>
                             <div>
-                                <h2 class="text-xl font-semibold">$<span id="memory-cost">0</span></h2>
+                                <h2 class="text-xl font-semibold">$<span id="extra-memory-cost">0</span></h2>
                             </div>
                         </div>
                         <hr>
@@ -111,7 +121,7 @@
                                 <h2 class="text-xl font-semibold">Extra Storage Cost</h2>
                             </div>
                             <div>
-                                <h2 class="text-xl font-semibold">$<span id="storage-cost">0</span></h2>
+                                <h2 class="text-xl font-semibold">$<span id="extra-storage-cost">0</span></h2>
                             </div>
                         </div>
                         <hr>
@@ -121,10 +131,10 @@
                                 <h2 class="text-xl font-semibold">Delivery Charge</h2>
                             </div>
                             <div>
-                                <h2 class="text-xl font-semibold">$<span id="delivery-cost">0</span></h2>
+                                <h2 class="text-xl font-semibold">$<span id="extra-delivery-cost">0</span></h2>
                             </div>
                         </div>
-                        <hr>
+                        <hr id="font-weight">
                         <div class="mt-4 mb-4 grid grid-cols-2 gap-4">
                             <!-- total price part -->
                             <div>
@@ -141,7 +151,7 @@
 
                                 <input id="promo-input" class="border-2 border-gray-400 rounded mb-4 px-2"
                                     type="password">
-                                <button id="discount-btn"
+                                <button id="promo-code-btn"
                                     class="bg-red-600 px-4 rounded py-2 text-white font-medium">Apply</button>
                             </div>
 
@@ -153,7 +163,7 @@
         </main>
         <!-- total amount part -->
         <footer>
-            <h1 class="text-5xl text-center">Total:$<span id="discount-cost">1299</span></h1>
+            <h1 class="text-5xl text-center">Total:$<span id="total-percent-cost">1299</span></h1>
         </footer>
     </header>
 

@@ -1,88 +1,76 @@
-// common function for getting all button input
-function macBookProCost(component, cost) {
-    const componentCost = document.getElementById(component + "-cost")
-    console.log(componentCost);
-    const previousMemoryCost = parseInt(componentCost.innerText);
-    componentCost.innerText = cost;
-    getTotalCost();
+//for getting all button input
+function macBookProCost(element, cost) {
+    const elementCost = document.getElementById(element + "-cost")
+    // console.log(elementCost);
+    // const previousMemoryCost = parseInt(elementCost.innerText);
+    elementCost.innerText = cost;
+    totalAmount();
 }
 
-
-// get input for calculation section
-function getInputCost(product) {
-    const productInput = document.getElementById(product + "-cost")
-    const productNumber = parseInt(productInput.innerText)
-    return productNumber;
+//calculation section for input
+function inputCost(product) {
+    const productCostText = document.getElementById(product + "-cost");
+    const productCostNumber = parseInt(productCostText.innerText);
+    return productCostNumber;
 
 }
 
+// finding total amount
+function totalAmount() {
+    const fixedCost = inputCost("fixed");
+    const changeableMemoryCost = inputCost("extra-memory");
+    const changeableStorageCost = inputCost("extra-storage");
+    const changeableDeliveryCost = inputCost("extra-delivery");
 
-// total cost calculation
-function getTotalCost() {
-    const bestCost = getInputCost("best");
-    const memoryCost = getInputCost("memory");
-    const storageCost = getInputCost("storage");
-    const deliveryCost = getInputCost("delivery");
+    const totalPrice = fixedCost + changeableMemoryCost + changeableStorageCost + changeableDeliveryCost;
 
+    document.getElementById("total-cost").innerText = totalPrice;
 
-    const subTotal = bestCost + memoryCost + storageCost + deliveryCost
+    document.getElementById("total-percent-cost").innerText = totalPrice;
 
-    document.getElementById("total-cost").innerText = subTotal
-
-    document.getElementById("discount-cost").innerText = subTotal
-
-
-    // discount price calculation
-    function discountPrice() {
-        const promoCode = document.getElementById("promo-input")
-        if (promoCode.value == "stevekaku") {
-            const discount = subTotal * 0.8
-            document.getElementById("discount-cost").innerText = discount;
+    // adding discount price
+    function totalDiscount() {
+        const promoInput = document.getElementById("promo-input")
+        if (promoInput.value == "stevekaku") {
+            const multiplyTotalPrice = totalPrice * 0.8;
+            document.getElementById("total-percent-cost").innerText = multiplyTotalPrice;
         }
-        promoCode.value = ""
+        promoInput.value = "";
     }
-    discountPrice();
+    totalDiscount();
 }
 
-
-
-
-// memory cost handling function
-document.getElementById("8gb-memory").addEventListener('click', function () {
-    macBookProCost("memory", 0);
+//handler for memory
+document.getElementById("memory-btn1").addEventListener('click', function () {
+    macBookProCost("extra-memory", 0);
 })
 
-document.getElementById("16gb-memory").addEventListener('click', function () {
-    macBookProCost("memory", 180)
+document.getElementById("memory-btn2").addEventListener('click', function () {
+    macBookProCost("extra-memory", 180);
 })
 
-
-
-// storage cost handling function
-document.getElementById("256gb-storage").addEventListener('click', function () {
-    macBookProCost("storage", 0)
+// handler for storage
+document.getElementById("storage-btn1").addEventListener('click', function () {
+    macBookProCost("extra-storage", 0);
 })
 
-document.getElementById("512gb-storage").addEventListener('click', function () {
-    macBookProCost("storage", 100)
+document.getElementById("storage-btn2").addEventListener('click', function () {
+    macBookProCost("extra-storage", 100);
 })
 
-document.getElementById("1tb-storage").addEventListener('click', function () {
-    macBookProCost("storage", 180)
+document.getElementById("storage-btn3").addEventListener('click', function () {
+    macBookProCost("extra-storage", 180);
 })
 
-
-// delivery cost handling function
-document.getElementById("delivery-option1").addEventListener('click', function () {
-    macBookProCost("delivery", 0)
+// handler for delivery
+document.getElementById("delivery-btn1").addEventListener('click', function () {
+    macBookProCost("extra-delivery", 0);
 })
-document.getElementById("delivery-option2").addEventListener('click', function () {
-    macBookProCost("delivery", 20)
+document.getElementById("delivery-btn2").addEventListener('click', function () {
+    macBookProCost("extra-delivery", 20);
 })
 
-
-
-// promo code handler function
-document.getElementById("discount-btn").addEventListener('click', function () {
-    getTotalCost()
+// handler for promo code
+document.getElementById("promo-code-btn").addEventListener('click', function () {
+    totalAmount();
 })
