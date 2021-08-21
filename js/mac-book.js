@@ -43,34 +43,34 @@ function totalAmount() {
 //handler for memory
 document.getElementById("memory-btn1").addEventListener('click', function () {
     macBookProCost("extra-memory", 0);
-})
+});
 
 document.getElementById("memory-btn2").addEventListener('click', function () {
     macBookProCost("extra-memory", 180);
-})
+});
 
 // handler for storage
 document.getElementById("storage-btn1").addEventListener('click', function () {
     macBookProCost("extra-storage", 0);
-})
+});
 
 document.getElementById("storage-btn2").addEventListener('click', function () {
     macBookProCost("extra-storage", 100);
-})
+});
 
 document.getElementById("storage-btn3").addEventListener('click', function () {
     macBookProCost("extra-storage", 180);
-})
+});
 
 // handler for delivery
 document.getElementById("delivery-btn1").addEventListener('click', function () {
     macBookProCost("extra-delivery", 0);
-})
+});
 document.getElementById("delivery-btn2").addEventListener('click', function () {
     macBookProCost("extra-delivery", 20);
-})
+});
 
 // handler for promo code
 document.getElementById("promo-code-btn").addEventListener('click', function () {
     totalAmount();
-})
+});
